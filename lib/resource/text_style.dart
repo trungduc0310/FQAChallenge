@@ -3,7 +3,6 @@ import 'package:fqa_challenge/resource/colors.dart';
 
 class TextStyles {
   static const TextStyle textTitleScreenStyle = TextStyle(
-      color: AppColors.colorTextPrimary,
       fontWeight: FontWeight.w600,
       fontFamily: 'Poppins',
       fontSize: 24);
@@ -19,6 +18,12 @@ class TextStyles {
       fontWeight: FontWeight.w600,
       fontFamily: 'Poppins',
       fontSize: 16);
+
+  static const TextStyle textContentInputTextPrimary = TextStyle(
+      fontSize: 16,
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w400,
+      color: AppColors.colorTextPrimary);
 
   static const TextStyle textContentSubFunction = TextStyle(
       fontSize: 14,
@@ -36,6 +41,12 @@ class TextStyles {
       color: AppColors.colorSecondaryText,
       fontFamily: 'Poppins',
       fontWeight: FontWeight.w400,
+      fontSize: 16);
+
+  static const TextStyle textErrorSignOnToast = TextStyle(
+      color: Colors.white,
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w500,
       fontSize: 16);
 
 }

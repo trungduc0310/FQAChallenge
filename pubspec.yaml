@@ -36,8 +36,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
 
+  flutter_styled_toast: ^2.2.1
 
-  flutter_svg: ^2.0.9
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:
@@ -70,7 +71,18 @@ flutter:
     - assets/image_app/background_appbar_image.png
     - assets/image_app/icon/icon_user_input_user_name.png
     - assets/image_app/icon/icon_password_input_password.png
+    - assets/image_app/icon/icon_hide_password_input_password.png
+    - assets/image_app/icon/icon_show_password_input_password.png
     - assets/image_app/icon/icon_google_button_other_login.png
+    - assets/image_app/icon/icon_facebook_button_other_login.png
+    - assets/image_app/icon/icon_zalo_button_other_login.png
+    - assets/image_app/icon/icon_error_sign_on_toast.png
+    - assets/image_app/icon/icon_apple_button_other_login.png
+    - assets/image_app/icon/icon_home_tab_question.png
+    - assets/image_app/icon/icon_home_tab_book_stroke.png
+    - assets/image_app/icon/icon_home_tab_timi.png
+    - assets/image_app/icon/icon_home_tab_notification.png
+    - assets/image_app/icon/icon_home_tab_profile.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

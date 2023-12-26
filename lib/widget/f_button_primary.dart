@@ -22,7 +22,9 @@ class FButtonPrimary extends StatelessWidget {
             minimumSize: MaterialStatePropertyAll(Size(double.infinity, 52)),
             backgroundColor:
             MaterialStatePropertyAll(AppColors.colorButtonPrimary)),
-        onPressed: onActionButton(),
+        onPressed: () {
+          onActionButton();
+        },
         child: Text(
           labelButton,
           style: TextStyles.textContentOnButtonPrimary,
