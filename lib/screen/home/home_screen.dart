@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.colorBackgroundDefault,
+      backgroundColor: AppColors.grayE5,
       appBar: AppBar(toolbarHeight: 0),
       body: _listTab[_selectTab],
       bottomNavigationBar: BottomNavigationBar(
@@ -63,8 +63,8 @@ class _HomePageState extends State<HomePage> {
         ],
         currentIndex: _selectTab,
         onTap: _onItemTapped,
-        selectedItemColor: AppColors.colorButtonPrimary,
-        unselectedItemColor: AppColors.colorTabUnSelected,
+        selectedItemColor: AppColors.orange4B ,
+        unselectedItemColor: AppColors.gray8E,
         showUnselectedLabels: true,
         showSelectedLabels: true,
         selectedFontSize: 12,

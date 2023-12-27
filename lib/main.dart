@@ -25,9 +25,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           useMaterial3: true,
           primaryColor: Colors.white,
-          textTheme: const TextTheme(
-            titleLarge: TextStyles.textTitleScreenStyle,
-          )),
+          textTheme: TextTheme(
+              titleLarge: TextStyles.textSemiBold.copyWith(fontSize: 24),
+              titleMedium: TextStyles.textSemiBold.copyWith(fontSize: 17),
+              titleSmall: TextStyles.textSemiBold.copyWith(fontSize: 14),
+              displayLarge: TextStyles.textSemiBold.copyWith(fontSize: 16),
+              displayMedium: TextStyles.textMedium.copyWith(fontSize: 14),
+              displaySmall: TextStyles.textRegular.copyWith(fontSize: 14),
+              bodyLarge: TextStyles.textMedium.copyWith(fontSize: 14),
+              bodyMedium: TextStyles.textRegular.copyWith(fontSize: 16),
+              bodySmall: TextStyles.textRegular.copyWith(fontSize: 12), )),
       routes: {
         Strings.screenLogin: (context) => LoginPage(),
         Strings.screenRegister: (context) => RegisterPage(),

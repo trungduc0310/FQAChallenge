@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fqa_challenge/screen/register/register_bloc.dart';
 import 'package:fqa_challenge/utils/toast_util.dart';
 
+import '../../resource/colors.dart';
 import '../../resource/strings.dart';
 import '../../resource/text_style.dart';
 import '../../widget/f_button_primary.dart';
@@ -34,6 +35,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
   @override
   Widget build(BuildContext context) {
+    var textTheme = Theme.of(context).textTheme;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -108,9 +110,9 @@ class _RegisterPageState extends State<RegisterPage> {
             const SizedBox(
               height: 20,
             ),
-            const Text(
+            Text(
               Strings.contentOtherRegisterChoice,
-              style: TextStyles.textContentSubFunction,
+              style: textTheme.displaySmall!.copyWith(color: AppColors.gray2E),
             ),
             const SizedBox(
               height: 20,
@@ -179,20 +181,22 @@ class FDirectorToLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var textTheme = Theme.of(context).textTheme;
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text(
+        Text(
           Strings.contentQuestionToLogin,
-          style: TextStyles.textDirectoryToAction,
+          style: textTheme.bodyMedium!.copyWith(color: AppColors.gray55),
         ),
-        TextButton(
-            onPressed: () {
+        InkWell(
+            onTap: () {
               onActionToLogin();
             },
-            child: const Text(
+            child: Text(
               Strings.contentActionGoToLogin,
-              style: TextStyles.textActionPrimary,
+              style: textTheme.displayLarge!.copyWith(color: AppColors.orange4B),
             ))
       ],
     );

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../resource/colors.dart';
-import '../resource/text_style.dart';
 
 class FButtonPrimary extends StatelessWidget {
   const FButtonPrimary({
@@ -21,13 +20,13 @@ class FButtonPrimary extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(8)))),
             minimumSize: MaterialStatePropertyAll(Size(double.infinity, 52)),
             backgroundColor:
-            MaterialStatePropertyAll(AppColors.colorButtonPrimary)),
+            MaterialStatePropertyAll(AppColors.orange4B)),
         onPressed: () {
           onActionButton();
         },
         child: Text(
           labelButton,
-          style: TextStyles.textContentOnButtonPrimary,
+          style: Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColors.white),
         ));
   }
 }

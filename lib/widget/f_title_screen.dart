@@ -11,7 +11,6 @@ class TitleScreen extends StatelessWidget {
     return Text(title,
         style: Theme.of(context)
             .textTheme
-            .titleLarge!
-            .copyWith(color: AppColors.colorTextPrimary));
+            .titleLarge!.copyWith(color: AppColors.black00));
   }
 }

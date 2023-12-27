@@ -29,17 +29,17 @@ class _LoginPageState extends State<LoginPage> {
   void initState() {
     super.initState();
     widget._bloc.loginStreamController.stream.listen((event) {
-      if(event){
+      if (event) {
         Navigator.pushNamed(context, Strings.screenHome);
       }
-    },
-        onError: (error) {
+    }, onError: (error) {
       AppToast.showErrorToast(context, error);
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    var textTheme = Theme.of(context).textTheme;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -94,9 +94,9 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(
               height: 20,
             ),
-            const Text(
+            Text(
               Strings.contentOtherLoginChoice,
-              style: TextStyles.textContentSubFunction,
+              style: textTheme.displaySmall!.copyWith(color: AppColors.gray2E),
             ),
             const SizedBox(
               height: 20,
@@ -159,20 +159,22 @@ class FDirectorToRegister extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var textTheme = Theme.of(context).textTheme;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text(
+        Text(
           Strings.contentQuestionToRegister,
-          style: TextStyles.textDirectoryToAction,
+          style: textTheme.bodyMedium!.copyWith(color: AppColors.gray55),
         ),
-        TextButton(
-            onPressed: () {
+        InkWell(
+            onTap: () {
               onActionToRegister();
             },
-            child: const Text(
+            child: Text(
               Strings.contentActionGoToRegister,
-              style: TextStyles.textActionPrimary,
+              style:
+                  textTheme.displayLarge!.copyWith(color: AppColors.orange4B),
             ))
       ],
     );

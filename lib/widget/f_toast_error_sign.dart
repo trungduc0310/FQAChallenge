@@ -13,7 +13,7 @@ class FToastErrorSign extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 6, horizontal: 16),
       decoration: const ShapeDecoration(
-          color: AppColors.colorErrorPrimary,
+          color: AppColors.red30,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(8)))),
       child: Row(
@@ -28,7 +28,10 @@ class FToastErrorSign extends StatelessWidget {
           ),
           Text(
             messageError,
-            style: TextStyles.textErrorSignOnToast,
+            style: Theme.of(context)
+                .textTheme
+                .bodyLarge!
+                .copyWith(color: AppColors.white),
           )
         ],
       ),

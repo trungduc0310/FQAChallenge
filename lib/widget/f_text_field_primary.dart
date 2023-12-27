@@ -24,13 +24,13 @@ class FTextFieldPrimary extends StatelessWidget {
   Widget build(BuildContext context) {
     var materialColor = MaterialStateColor.resolveWith((states) =>
         (states.contains(MaterialState.focused)
-            ? AppColors.colorTextPrimary
-            : AppColors.colorHigh3Text));
+            ? AppColors.black00
+            : AppColors.grayAA));
     return TextField(
       obscureText: usePassword ?? false,
       decoration: InputDecoration(
           hintText: hintText,
-          hintStyle: const TextStyle(color: AppColors.colorHigh3Text),
+          hintStyle: const TextStyle(color: AppColors.grayAA),
           focusedBorder: const FocusedBorderInputField(),
           enabledBorder: const DefaultBorderInputField(),
           suffixIcon: iconEnd,
@@ -43,8 +43,8 @@ class FTextFieldPrimary extends StatelessWidget {
           prefixIconColor: materialColor,
           suffixIconColor: materialColor),
       textInputAction: textInputAction,
-      cursorColor: AppColors.colorButtonPrimary,
-      style: TextStyles.textContentInputTextPrimary,
+      cursorColor: AppColors.orange4B,
+      style: Theme.of(context).textTheme.bodyMedium,
       controller: controller,
     );
   }
@@ -52,13 +52,12 @@ class FTextFieldPrimary extends StatelessWidget {
 
 class FocusedBorderInputField extends OutlineInputBorder {
   const FocusedBorderInputField(
-      {super.borderSide = const BorderSide(color: AppColors.colorButtonPrimary),
+      {super.borderSide = const BorderSide(color: AppColors.orange4B),
       super.borderRadius = const BorderRadius.all(Radius.circular(8))});
 }
 
 class DefaultBorderInputField extends OutlineInputBorder {
   const DefaultBorderInputField(
-      {super.borderSide =
-          const BorderSide(color: AppColors.colorBorderTextField),
+      {super.borderSide = const BorderSide(color: AppColors.grayC6),
       super.borderRadius = const BorderRadius.all(Radius.circular(8))});
 }

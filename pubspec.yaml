@@ -120,9 +120,9 @@ flutter:
         - asset: assets/fonts/svn_light.ttf
           weight: 100
         - asset: assets/fonts/svn_medium.ttf
-          weight: 400
+          weight: 500
         - asset: assets/fonts/svn_regular.ttf
-          weight: 300
+          weight: 400
         - asset: assets/fonts/svn_poppins_italic.otf
         - asset: assets/fonts/svn_italic.ttf
           style: italic
